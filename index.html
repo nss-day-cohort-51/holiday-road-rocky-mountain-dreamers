@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="icon" type="image/png" href="./styles/images/wineglass.png">
+    <title>Rocky Mountain Dreamers</title>
+</head>
+
+<body>
+
+    <header>
+        <section id="headerLogo">
+            <div id="headerImage">
+                <img src="./styles/images/wineglass.png" alt="wineglass">
+            </div>
+        </section>
+        <section id="bannerImage">
+            <img src="./styles/images/banner.jpeg" alt="scenic banner">
+        </section>
+    </header>
+
+    <main>
+        <!-- left section -->
+        <section>
+            <nav>
+                <div>
+                <fieldset>
+                    <label for="state">Select State</label>
+                    <select name="state" id="state">
+                    </select>
+                </fieldset>
+                </div>
+
+                <div>
+                <fieldset>
+                    <label for="park">Select National Park</label>
+                    <select name="park" id="park">
+                    </select>
+                </fieldset>
+                </div>
+
+                <div>
+                <fieldset>
+                    <label for="bizarrery">Select Bizarrery</label>
+                    <select name="bizarrery" id="bizarrery">
+                    </select>
+                </fieldset>
+                </div>
+
+                <div>
+                <fieldset>
+                    <label for="eatery">Select Eatery</label>
+                    <select name="eatery" id="eatery">
+                    </select>
+                </fieldset>
+                </div>
+
+                <div id="saveTrip">
+                    <button id="saveTripButton">Save Trip</button>
+                </div>
+            </nav>
+        </section>
+
+        <!-- middle section -->
+        <section>
+            <div>
+                <h2>Trip Preview</h2>
+            </div>
+            <div id="weather"></div>
+            <div>
+                <h3>National Park</h3>
+            </div>
+            <div id="parkDetailButton">       
+            </div>
+            <div>
+                <h3>Bizarrery</h3>
+            </div>
+            <div id="bizerreryDetailButton">       
+            </div>
+            <div>
+                <h3>Eatery</h3>
+            </div>
+            <div id="eateryDetailButton">       
+            </div>
+
+        </section>
+
+        <!-- right section -->
+        <section>
+            <div id="myTrips">
+                <h2>My Trips</h2>
+            </div>
+            <aside id="mySavedTrips">
+                <div id="savedTripData">
+                </div>
+            </aside>
+        </section>
+
+    </main>
+    
+    <footer>&copy;2021 Rocky Mountain Dreamers</footer>
+</body>
+
+</html>
