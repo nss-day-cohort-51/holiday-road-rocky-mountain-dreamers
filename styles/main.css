@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header { 
+    /* THIS IS THE MAIN HEADER CONTAINER.  IT HOLDS THE HEADER, LOGO IMAGE, BANNER IMAGE */
+    display: flex;
+    flex-direction: row;
+    background-color: #EFC0CA;
+    height: 200px;
+    Font-Family: 'Questrial', Sans-Serif;
+    Font-Size: 40px;
+}
+#headerLogo{
+    /* THIS IS A SECTION FOR KEEPING THE LOGO AND BANNER IMAGE APART */
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 100%;
+    border-bottom: 2px EFC0CA solid;
+}
+#headerImage img{
+/* THIS IS FOR THE IMAGE OF WINE GLASS AND TEXT */
+    height: 100%;
+    width: 300px;
+}
+#bannerImage{
+/* THIS IS FOR THE BANNER IMAGE BEING STRETCHED ACROSS THE HEADER */
+/* THIS DOES NOT DO ANYTHING TO THE IMAGE ITSELF.  IT'S JUST A CONTAINER */
+    display: flex;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 2px #EFC0CA solid;
+}
+#bannerImage img{
+    /* MODIFY THIS IF YOU WANT TO CHANGE THE BANNER IMAGE */
+    width: 100%;
+    height: 400px;
+    margin-top: -100px;
+}
+
+
+/* THIS IS FOR THE LEFT SECTION OF THE PAGE 
+THIS WILL CONTAIN THE "PLAN YOUR TRIP" INFO
+STATE SELECTION 
+NATIONAL PARK SELECTION
+BIZARRERIES SELECTION
+EATERIES SELECTION
+SAVE TRIP BUTTON */
+main{
+    display: flex;
+    flex-direction: row;
+}
+#leftSection{
+    width: 500px;
+    height: 700px;
+    display: flex;
+}
+nav{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: #979B8D;
+    border-right: 2px #EFC0CA solid;
+    justify-content: space-around;
+}
+nav .h3Text{
+    display: flex;
+    justify-content: center;
+}
+#saveTrip{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+#saveTripButton{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    font-size: 1.7em;
+    align-items: center;
+    background-color: #EFC0CA;
+    border-radius: 8px;
+}
+
+
+
+#middleSection {
+    width: 920px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+#middleSection .h1{
+
+}
+
+
+
+
+#rightSection {
+    width: 500px;
+    height: 700px;
+    display: flex;
+}
