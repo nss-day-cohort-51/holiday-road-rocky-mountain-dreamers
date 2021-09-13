@@ -1,8 +1,29 @@
-# Holiday Road from Nashville
+# Plein Fresh Air Travel Planner
 
-You and your teammates have been contracted by the National Parks Service to build an application that will allow people to plan excursions for trips to our country's beautiful national parks. The starting point of each trip will be Nashville, TN with a national park destination and two other stops along the way. The additional stops will include one bizarrary and one Eatery.
+Plein Fresh Air is a series of external API's that lets a user create a custom trip based on their specific needs. 
 
-You are creating this app for a specific type of user. Choose one of the personas below as your target. Refer back to the persona when making choices about layout, content hierarchy, and usability. 
+A user will select a state, and will be given a drop down of National Parks to choose from. After selecting a National Park, the user will be given a drop down of bizarries and eateries close by. The user will be given the option to toggle between places and choose what best fits their travel needs. 
+
+After building the perfect trip, the user will be able to save their customized trip, and continue planning other trips. 
+
+The user is also able to see the weather for each location as they select different travel locations.
+
+# Wireframe
+![Getting Started](./images/readmeWIREFRAME.png)
+
+# ERD
+![Getting Started](images/readmeERD.png)
+
+
+# Persona
+| [Betsy](./personas/persona-betsy.png) |
+
+# Authors
+Emily Reed
+Chris Murphy
+Jake Lashenik
+Morgan Massey
+ 
 
 ## Getting Started
 
@@ -55,10 +76,6 @@ After each teammate clones the repository, each member must perform the followin
 You will need a complete `README.md` for this project. Be sure to include a screenshot of your ERD and Wireframe and listing of team members. 
 * [README Materials](https://github.com/nss-day-cohort-51/client-side-mastery/blob/main/book-2-giffygram/chapters/Project-Readme.md)
 
-## Personas
-| [Anna](./personas/persona-anna.png) | [Betsy](./personas/persona-betsy.png) | [Brittany](./personas/persona-brittany.png) | [Caroline](./personas/persona-caroline.png) | [Charles](./personas/persona-charles.png) | [Jake](./personas/persona-jake.png) | [Peter](./personas/persona-peter.png)
-| -- | -- | -- | -- | -- | -- | -- |
-|![](./personas/persona-anna.png) | ![](./personas/persona-betsy.png)| ![](./personas/persona-brittany.png) | ![](./personas/persona-caroline.png) | ![](./personas/persona-charles.png) | ![](./personas/persona-jake.png) | ![](./personas/persona-peter.png)
 
 ### Stretch Goal: Directions
 
