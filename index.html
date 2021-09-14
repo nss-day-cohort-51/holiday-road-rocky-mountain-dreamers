@@ -14,14 +14,7 @@
 <body>
 
     <header>
-        <section id="headerLogo">
-            <div id="headerImage">
-                <img src="./styles/images/PLEINLOGO.png" alt="wineglass">
-            </div>
-        </section>
-        <section id="bannerImage">
-            <img src="./styles/images/banner.jpeg" alt="scenic banner">
-        </section>
+
     </header>
 
     <main>
@@ -73,37 +66,44 @@
         <!-- middle section -->
         <section id="middleSection">
             <div>
-                <h1>Trip Preview</h1>
-            </div>
-            <div id="weather"></div>
-            <div>
-                <h3>National Park</h3>
-            </div>
-            <div id="parkDetailButton">
-                <button>details placeholder</button>
-            </div>
-            <div>
-                <h3>Bizarrery</h3>
-            </div>
-            <div id="bizerreryDetailButton">
-                <button>details placeholder</button>
-            </div>
-            <div>
-                <h3>Eatery</h3>
-            </div>
-            <div id="eateryDetailButton">
-                <button>details placeholder</button>
+                <h1 id="tripPreviewHeader">Trip Preview</h1>
             </div>
 
+            <div id="weather">
+                <p>THIS IS WHERE THE WEATHER WILL APPEAR</p>
+            </div>
+
+            <div id="natlParkContainer">
+                <h3 id="natlParkText">National Park</h3>
+                <div id="parkDetailsContainer">
+                    <button id="parkDetailsButton">Details</button>
+                </div>
+            </div>
+
+            <div id="bizarreryContainer">
+                <h3 id="bizarreryText">Bizarrery</h3>
+                <div id="bizarreryDetailsContainer">
+                    <button id="bizarreryDetailsButton">Details</button>
+                </div>
+            </div>
+
+            <div id="eateryContainer">
+                <h3 id="eateryText">Eatery</h3>
+                <div id="eateryDetailsContainer">
+                    <button id="eateryDetailsButton">Details</button>
+                </div>
+            </div>
         </section>
 
         <!-- right section -->
         <section id="rightSection">
-            <div id="myTrips">
-                <h2>My Trips</h2>
+            <div id="myTripsContainer">
+                <h2 id="myTripsText">My Trips</h2>
             </div>
+
             <aside id="mySavedTrips">
                 <div id="savedTripData">
+                    <p>Here is some text</p>
                 </div>
             </aside>
         </section>
