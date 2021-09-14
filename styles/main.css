@@ -23,6 +23,7 @@ header {
 }
 #headerImage img{
 /* THIS IS FOR THE IMAGE OF WINE GLASS AND TEXT */
+    
     height: 100%;
     width: 300px;
 }
