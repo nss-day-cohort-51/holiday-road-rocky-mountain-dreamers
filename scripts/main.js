@@ -1,7 +1,10 @@
+
 import { eatList } from "./eateries/EateryList.js";
 import { getEateries } from "./eateries/EateryDataManager.js";
 import { bizList } from "./attractions/attractionList.js";
 import { getBizarreries } from "./attractions/AttractionDataManager.js";
+import { getParks } from "./parks/ParkDataManager.js";
+
 
 const showEat = () => {
     // This Function takes the imported eateries and adds it to the drop doen menu in HTML
@@ -13,7 +16,6 @@ const showEat = () => {
 }
 showEat();
 
-
 const showBiz = () => {
     // This Function takes the imported info from attractions and adds it to the drop down menu in HTML
     const bizElement = document.querySelector("#bizarrery");
@@ -22,5 +24,28 @@ const showBiz = () => {
     }
     )
 }
+const showParks = (stateCode) => {
+    const parkElement = document.querySelector("#park");
+    getParks(stateCode).then((allParks) => {
+        parkElement.innerHTML = getParksList(allParks);
+    })
+
+
+}
+
+const applicationElement = document.querySelector("#leftSection");
+
+applicationElement.addEventListener("change", event =>{
+    if (event.target.id === "#state") {
+    showParks(event.target.value)
+    }
+})
+
+
+
+
+// getParksData();
+
+
 
 showBiz();
