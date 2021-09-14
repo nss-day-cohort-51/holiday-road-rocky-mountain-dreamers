@@ -15,28 +15,6 @@ header {
     display: flex;
     flex-direction: row;
     Font-Size: 40px;
-<<<<<<< HEAD
-}
-#headerLogo{
-    /* THIS IS A SECTION FOR KEEPING THE LOGO AND BANNER IMAGE APART */
-    display: flex;
-    flex-direction: row;
-    width: 300px;
-    height: 100%;
-    border-bottom: 2px EFC0CA solid;
-}
-#headerImage img{
-/* THIS IS FOR THE IMAGE OF WINE GLASS AND TEXT */
-    
-    height: 100%;
-    width: 300px;
-}
-#bannerImage{
-/* THIS IS FOR THE BANNER IMAGE BEING STRETCHED ACROSS THE HEADER */
-/* THIS DOES NOT DO ANYTHING TO THE IMAGE ITSELF.  IT'S JUST A CONTAINER */
-    display: flex;
-=======
->>>>>>> main
     height: 200px;
     background-color: #EFC0CA;
     border-bottom: 2px #EFC0CA solid;
