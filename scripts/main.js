@@ -4,6 +4,8 @@ import { getEateries } from "./eateries/EateryDataManager.js";
 import { bizList } from "./attractions/attractionList.js";
 import { getBizarreries } from "./attractions/AttractionDataManager.js";
 import { getParks } from "./parks/ParkDataManager.js";
+import { statesList } from "./states/statesList.js";
+import { getStates } from "./states/statesDataManager.js";
 
 
 const showEat = () => {
@@ -33,6 +35,9 @@ const showParks = (stateCode) => {
 
 }
 
+
+
+
 const applicationElement = document.querySelector("#leftSection");
 
 applicationElement.addEventListener("change", event =>{
@@ -41,6 +46,14 @@ applicationElement.addEventListener("change", event =>{
     }
 })
 
+const showStates = () => {
+    // This Function takes the imported info from attractions and adds it to the drop down menu in HTML
+    const statesElement = document.querySelector("#state");
+    getStates().then(response => {
+        statesElement.innerHTML = statesList(response);
+    }
+    )
+}
 
 
 
@@ -49,3 +62,4 @@ applicationElement.addEventListener("change", event =>{
 
 
 showBiz();
+showStates();
