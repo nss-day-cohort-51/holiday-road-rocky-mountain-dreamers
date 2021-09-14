@@ -1,17 +1,21 @@
 * {
+/* THIS SETS THE MARGIN AND PADDING TO 0 FOR THE ENTIRE PAGE */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+/* THIS SETS THE BODY BACKGROUND TO GREEN TO PREVENT WHITE SPACE BELOW THE FOOTER */
+    background-color: #214E34;
+}
+
 header { 
-    /* THIS IS THE MAIN HEADER CONTAINER.  IT HOLDS THE HEADER, LOGO IMAGE, BANNER IMAGE */
+/* THIS IS THE MAIN HEADER CONTAINER.  IT HOLDS THE HEADER, LOGO IMAGE, BANNER IMAGE */
     display: flex;
     flex-direction: row;
-    background-color: #EFC0CA;
-    height: 200px;
-    Font-Family: 'Questrial', Sans-Serif;
     Font-Size: 40px;
+<<<<<<< HEAD
 }
 #headerLogo{
     /* THIS IS A SECTION FOR KEEPING THE LOGO AND BANNER IMAGE APART */
@@ -31,54 +35,50 @@ header {
 /* THIS IS FOR THE BANNER IMAGE BEING STRETCHED ACROSS THE HEADER */
 /* THIS DOES NOT DO ANYTHING TO THE IMAGE ITSELF.  IT'S JUST A CONTAINER */
     display: flex;
+=======
+>>>>>>> main
     height: 200px;
-    width: 100%;
-    overflow: hidden;
+    background-color: #EFC0CA;
     border-bottom: 2px #EFC0CA solid;
-}
-#bannerImage img{
-    /* MODIFY THIS IF YOU WANT TO CHANGE THE BANNER IMAGE */
-    width: 100%;
-    height: 400px;
-    margin-top: -100px;
+    Font-Family: 'Questrial', Sans-Serif;
+    background-image: url("./images/PFAbanner2.png");
 }
 
-
-/* THIS IS FOR THE LEFT SECTION OF THE PAGE 
-THIS WILL CONTAIN THE "PLAN YOUR TRIP" INFO
-STATE SELECTION 
-NATIONAL PARK SELECTION
-BIZARRERIES SELECTION
-EATERIES SELECTION
-SAVE TRIP BUTTON */
 main{
+/* MAIN BODY OF THE ENTIRE PAGE.  COVERS LEFT TO RIGHT */
     display: flex;
     flex-direction: row;
 }
 #leftSection{
-    width: 500px;
+/* MAIN CONTAINER FOR THE LEFT SECTION OF SITE */
+    width: 425px;
     height: 700px;
     display: flex;
 }
 nav{
-    width: 300px;
+/* CONTAINER THAT HOLDS STATE/PARK/BIZARRERY/EATERY SLECTION BOXES */
+    width: 100%;  
     display: flex;
     flex-direction: column;
     background-color: #979B8D;
     border-right: 2px #EFC0CA solid;
+    border-bottom: 2px #EFC0CA solid;
     justify-content: space-around;
 }
 nav .h3Text{
+/* COVERS ALL TEXT IN THE LEFT NAV PANE */
     display: flex;
     justify-content: center;
 }
 #saveTrip{
+/* CONTAINER THAT WILL HOLD THE SAVE TRIP BUTTON */
     display: flex;
     flex-direction: column;
     margin-right: 10px;
     margin-left: 10px;
 }
 #saveTripButton{
+/* THIS IS THE SAVE TRIP BUTTON, OBVIOUSLY */
     display: flex;
     justify-content: center;
     height: 50px;
@@ -89,22 +89,135 @@ nav .h3Text{
 }
 
 
-
 #middleSection {
-    width: 920px;
+/* SETS THE WIDTH AND HEIGHT OF THE MIDDLE SECTION */
+    width: 1370px;
     height: 700px;
     display: flex;
     flex-direction: column;
+    background-color: #FFFFFF;
+    border-right: 2px #EFC0CA solid;
+    border-bottom: 2px #EFC0CA solid;
 }
-#middleSection .h1{
-
+#tripPreviewHeader {
+    display: flex;
+    justify-content: center;
+}
+#weather {
+/* CONTAINER FOR THE WEATHER API INFO */
+    display: flex;
+    height: 167.75px; /* THIS IS AN EVEN DISTRIBUTION AMOUNT FOR 4 CONTAINERS */
+    justify-content: center;
+    align-items: center;
 }
 
+
+/* BEGIN SECTION OF NATIONAL PARK INFORMATION */
+#natlParkContainer {
+    height: 167.75px; /* THIS IS AN EVEN DISTRIBUTION AMOUNT FOR 4 CONTAINERS */
+    width: 100%;
+    overflow: hidden;
+}
+#natlParkText {
+    display: flex;
+    justify-content: center;
+}
+#parkDetailsContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 120px;
+}
+#parkDetailsButton {
+    height: 25px;
+    width: 75px;
+    font-weight: bold;
+    background-color: #EFC0CA;
+}
+/* END SECTION OF NATION PARK INFORMATION */
+
+
+/* BEGIN SECTION OF BIZARRERY INFORMATION */
+#bizarreryContainer {
+    height: 167.75px; /* THIS IS AN EVEN DISTRIBUTION AMOUNT FOR 4 CONTAINERS */
+    width: 100%;
+    overflow: hidden;
+}
+#bizarreryText {
+    display: flex;
+    justify-content: center;
+}
+#bizarreryDetailsContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 120px;
+}
+#bizarreryDetailsButton {
+    height: 25px;
+    width: 75px;
+    font-weight: bold;
+    background-color: #EFC0CA;
+}
+/* END SECTION OF BIZARRERY INFORMATION */
+
+
+/* BEGIN SECTION OF EATERY INFORMATION */
+#eateryContainer {
+    height: 167.75px; /* THIS IS AN EVEN DISTRIBUTION AMOUNT FOR 4 CONTAINERS */
+    width: 100%;
+    overflow: hidden;
+}
+#eateryText {
+    display: flex;
+    justify-content: center;
+}
+#eateryDetailsContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 120px;
+}
+#eateryDetailsButton {
+    height: 25px;
+    width: 75px;
+    font-weight: bold;
+    background-color: #EFC0CA;
+}
+/* END SECTION OF EATERY INFORMATION */
 
 
 
 #rightSection {
-    width: 500px;
+    width: 375px;
     height: 700px;
     display: flex;
+    flex-direction: column;
+    background-color: #214E34;
+}
+#myTripsContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#myTripsText {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+#savedTripData {
+    width: 100%;
+    height: 675px;
+    display: flex;
+    justify-content: center;
+}
+
+
+footer {
+    background-color: #214E34;
+}
+footer p {
+    display: flex;
+    justify-content: center;
+}
+#meetTheTeamButton {
+    display: flex;
+    justify-content: center;
 }
