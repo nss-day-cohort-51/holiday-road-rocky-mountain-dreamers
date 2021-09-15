@@ -1,3 +1,3 @@
 export const states = (statesObject) => {
-    return `<option value=${statesObject.id}>${statesObject.stateName}</option>`
+    return `<option value=${statesObject.stateCode}>${statesObject.stateName}</option>`
 }
