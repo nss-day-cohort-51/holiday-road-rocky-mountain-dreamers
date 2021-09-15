@@ -1,6 +1,6 @@
 
 import { eatList } from "./eateries/EateryList.js";
-import { getEateries } from "./eateries/EateryDataManager.js";
+import { getEateries, getSoloEat } from "./eateries/EateryDataManager.js";
 import { bizList } from "./attractions/attractionList.js";
 import { getBizarreries, getSoloBiz } from "./attractions/AttractionDataManager.js";
 import { getParks, getSoloPark } from "./parks/ParkDataManager.js";
@@ -9,6 +9,7 @@ import { getStates } from "./states/statesDataManager.js";
 import { ParkList } from "./parks/ParkList.js";
 import { park } from "./parks/Park.js";
 import { parkPreview } from "./parks/parkPreview.js";
+import { eatPreview } from "./eateries/EateriesPreview.js";
 import { bizPreview } from "./attractions/attractionPreview.js";
 
 
@@ -26,7 +27,6 @@ const showEat = () => {
     }
     )
 }
-showEat();
 
 const showBiz = () => {
     // This Function takes the imported info from attractions and adds it to the drop down menu in HTML
@@ -53,7 +53,16 @@ const showParkPreview = (parkCode) => {
         console.log(parkCode)
     })
 
-    
+
+}
+
+const showEatPreview = (eatery) => {
+    const eatPreviewElement = document.querySelector("#eatDisplay");
+    getSoloEat(eatery).then((soloEatData) => {
+        console.log(soloEatData)
+        eatPreviewElement.innerHTML = eatPreview(soloEatData)
+    })
+
 }
 
 const showBizPreview = (bizarrery) => {
@@ -63,28 +72,27 @@ const showBizPreview = (bizarrery) => {
         bizPreviewElement.innerHTML = bizPreview(soloBizData)
     })
 
-    
-}
 
+}
 
 
 
 const applicationElement = document.querySelector("#leftSection");
 
-applicationElement.addEventListener("change", event =>{
-    
+applicationElement.addEventListener("change", event => {
+
     if (event.target.id === "state") {
-    console.log(event.target.value)
+        console.log(event.target.value)
         showPark(event.target.value)
     }
-    else if (event.target.id=== "park"){
+    else if (event.target.id === "park") {
         showParkPreview(event.target.value)
-
-        
-        
     }
-    else if (event.target.id=== "bizarrery"){
+    else if (event.target.id === "bizarrery") {
         showBizPreview(event.target.value)
+    }
+    else if (event.target.id === "eatery") {
+        showEatPreview(event.target.value)
     }
 })
 
@@ -117,4 +125,4 @@ const showStates = () => {
 
 showBiz();
 showStates();
-
+showEat();
