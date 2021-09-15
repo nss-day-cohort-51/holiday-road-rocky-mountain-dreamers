@@ -2,14 +2,14 @@
 import { eatList } from "./eateries/EateryList.js";
 import { getEateries } from "./eateries/EateryDataManager.js";
 import { bizList } from "./attractions/attractionList.js";
-import { getBizarreries } from "./attractions/AttractionDataManager.js";
+import { getBizarreries, getSoloBiz } from "./attractions/AttractionDataManager.js";
 import { getParks, getSoloPark } from "./parks/ParkDataManager.js";
 import { statesList } from "./states/statesList.js";
 import { getStates } from "./states/statesDataManager.js";
 import { ParkList } from "./parks/ParkList.js";
 import { park } from "./parks/Park.js";
 import { parkPreview } from "./parks/parkPreview.js";
-
+import { bizPreview } from "./attractions/attractionPreview.js";
 
 
 
@@ -55,6 +55,16 @@ const showParkPreview = (parkCode) => {
     
 }
 
+const showBizPreview = (bizarrery) => {
+    const bizPreviewElement = document.querySelector("#bizDisplay");
+    getSoloBiz(bizarrery).then((soloBizData) => {
+        console.log(soloBizData)
+        bizPreviewElement.innerHTML = bizPreview(soloBizData)
+    })
+
+    
+}
+
 
 
 
@@ -68,9 +78,15 @@ applicationElement.addEventListener("change", event =>{
     }
     else if (event.target.id=== "park"){
         showParkPreview(event.target.value)
+
+        
         
     }
+    else if (event.target.id=== "bizarrery"){
+        showBizPreview(event.target.value)
+    }
 })
+
 
 
 
@@ -100,3 +116,4 @@ const showStates = () => {
 
 showBiz();
 showStates();
+
