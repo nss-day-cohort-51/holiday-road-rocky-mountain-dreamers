@@ -50,6 +50,7 @@ const showParkPreview = (parkCode) => {
     getSoloPark(parkCode).then((soloParkData) => {
         console.log(soloParkData)
         parkPreviewElement.innerHTML = parkPreview(soloParkData[0])
+        console.log(parkCode)
     })
 
     
