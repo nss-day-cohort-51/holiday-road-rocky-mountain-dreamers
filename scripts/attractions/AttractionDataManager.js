@@ -3,3 +3,16 @@ export const getBizarreries = () => {
 return fetch('http://holidayroad.nss.team/bizarreries')
   .then(response => response.json())
 }
+
+let bizCollection= []
+
+export const getSoloBiz= (id) => {
+
+  return fetch(`http://holidayroad.nss.team/bizarreries/${id}`)
+  .then(response => response.json())
+  .then(parsedResponse => {
+    bizCollection = parsedResponse;
+    return bizCollection; 
+  
+})
+}
