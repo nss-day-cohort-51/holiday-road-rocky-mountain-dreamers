@@ -30,7 +30,7 @@ main{
 #leftSection{
 /* MAIN CONTAINER FOR THE LEFT SECTION OF SITE */
     width: 425px;
-    height: 700px;
+    height: auto;
     display: flex;
 }
 nav{
@@ -70,7 +70,7 @@ nav .h3Text{
 #middleSection {
 /* SETS THE WIDTH AND HEIGHT OF THE MIDDLE SECTION */
     width: 1370px;
-    height: 700px;
+    height: auto;
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
@@ -104,12 +104,15 @@ nav .h3Text{
     display: flex;
     justify-content: flex-end;
     padding-top: 120px;
+    padding-left: 50px;
+    padding-top: 25px;
 }
 #parkDetailsButton {
     height: 25px;
     width: 75px;
     font-weight: bold;
     background-color: #EFC0CA;
+    
 }
 /* END SECTION OF NATION PARK INFORMATION */
 
@@ -165,7 +168,7 @@ nav .h3Text{
 
 #rightSection {
     width: 375px;
-    height: 700px;
+    height: auto;
     display: flex;
     flex-direction: column;
     background-color: #214E34;
@@ -198,4 +201,32 @@ footer p {
 #meetTheTeamButton {
     display: flex;
     justify-content: center;
+}
+
+#parkImage {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    height: 200px;
+}
+
+#parkImage img {
+    
+    width: auto;
+    height: auto;
+}
+
+.parkImageDetail {
+    display: flex;
+    flex-direction: column;  
+    padding-left: 20px;
+    align-items: left;
+    
+}
+.parkImageDesc {
+    padding-top: 10px;
+    display: flex;
+    align-items: left;
+
+
 }
