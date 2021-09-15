@@ -9,6 +9,7 @@ import { getStates } from "./states/statesDataManager.js";
 import { ParkList } from "./parks/ParkList.js";
 import { park } from "./parks/Park.js";
 import { parkPreview } from "./parks/parkPreview.js";
+import { eatPreview } from "./eateries/EateriesPreview.js";
 
 
 
@@ -55,6 +56,15 @@ const showParkPreview = (parkCode) => {
     
 }
 
+const showEatPreview = (state) => {
+    const eatPreviewElement = document.querySelector("#eateryDisplay");
+    getSoloEat(state).then((soloEatData) => {
+        console.log(soloEatData)
+        eatPreviewElement.innerHTML = eatPreview(soloEatData[0])
+    })
+
+    
+}
 
 
 
