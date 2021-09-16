@@ -14,6 +14,9 @@ import { bizPreview } from "./attractions/attractionPreview.js";
 import { parks } from "./parks/Park.js";
 import { createTripEntry } from "./trips/tripDataManager.js";
 
+const showParkDetail = () => {
+    document.querySelector("#parkDetails").showModal();
+}
 
 const showEat = () => {
     // This Function takes the imported eateries and adds it to the drop doen menu in HTML
@@ -42,6 +45,11 @@ const showParkPreview = (parkCode) => {
     getSoloPark(parkCode).then((soloParkData) => {
         //console.log(soloParkData)
         parkPreviewElement.innerHTML = parkPreview(soloParkData[0])
+        const parkDetailsButtonElement = document.querySelector("#parkDetailsButton")
+        
+        parkDetailsButtonElement.addEventListener("click", event => {
+            showParkDetail();
+        })
         //console.log(parkCode)
     })
 }
@@ -107,15 +115,13 @@ saveButtonElement.addEventListener("click", event => {
         bizarreryId: parseInt(savedBizarrery),
         eateryId: parseInt(savedEatery)
     }
-console.log(savedTripObject);
+    console.log(savedTripObject);
     // be sure to import from the DataManager
     createTripEntry(savedTripObject)
         .then(dbResponse => {
             //showTrips();
         });
 })
-
-
 
 
 
