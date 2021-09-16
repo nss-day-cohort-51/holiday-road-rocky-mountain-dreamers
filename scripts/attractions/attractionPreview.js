@@ -1,8 +1,22 @@
 export const bizPreview = (bizObject) => {
     return `
       <section>
-      <h2>${bizObject.name}</h2>
+      <div class="bizName">
+      <h4>${bizObject.name}</h4>
+      </div>
+      
+      <div class="bizDesc">
+      <p>${bizObject.description}</p>
+      </div>
+      
+     
+      
+      
       
       </section>
+      <div class="bizDetailButton">
+      <button id="bizarreryDetailsButton">Details</button>
+      </div>
     `
 }
+

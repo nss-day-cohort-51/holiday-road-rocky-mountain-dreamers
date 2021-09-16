@@ -22,9 +22,9 @@
             <nav>
                 <div>
                     <h3 class="h3Text">Select State</h3>
-                    <fieldset>
-                        <label for="state"></label>
-                        <select name="state" id="state">
+                    <fieldset class="navStateField">
+                        <label class="navStateName" for="state"></label>
+                        <select class="navState" name="state" id="state">
                         </select>
                     </fieldset>
                 </div>
@@ -32,27 +32,27 @@
                 <div>
                     <!-- <section class="parkData"></section> -->
                     <h3 class="h3Text">Select National Park</h3>
-                    <fieldset>
-                        <label for="park"></label>
-                        <select name="park" id="park">
+                    <fieldset class="navParkField">
+                        <label class="navParkName" for="park"></label>
+                        <select class="navPark" name="park" id="park">
                         </select>
                     </fieldset>
                 </div>
 
                 <div>
                     <h3 class="h3Text">Select Bizarrery</h3>
-                    <fieldset>
-                        <label for="bizarrery"></label>
-                        <select name="bizarrery" id="bizarrery">
+                    <fieldset class="navBizField">
+                        <label class="navBizName" for="bizarrery"></label>
+                        <select class="navBiz" name="bizarrery" id="bizarrery">
                         </select>
                     </fieldset>
                 </div>
 
                 <div>
                     <h3 class="h3Text">Select Eatery</h3>
-                    <fieldset>
+                    <fieldset class="navEatField">
                         <label for="eatery"></label>
-                        <select name="eatery" id="eatery">
+                        <select class="navEat" name="eatery" id="eatery">
                         </select>
                     </fieldset>
                 </div>
@@ -77,16 +77,13 @@
             <div id="natlParkContainer">
                 <h3 id="natlParkText">National Park</h3>
                 <div id="parkDisplay"></div>
-                <div id="parkDetailsContainer">
-                    
-                </div>
             </div>
 
             <div id="bizarreryContainer">
                 <h3 id="bizarreryText">Bizarrery</h3>
                 <div id="bizDisplay"></div>
                 <div id="bizarreryDetailsContainer">
-                    <button id="bizarreryDetailsButton">Details</button>
+                
                 </div>
             </div>
 
@@ -94,7 +91,7 @@
                 <h3 id="eateryText">Eatery</h3>
                 <div id="eatDisplay"></div>
                 <div id="eateryDetailsContainer">
-                    <button id="eateryDetailsButton">Details</button>
+                    <!-- <button id="eateryDetailsButton">Details</button> -->
                 </div>
             </div>
         </section>
@@ -114,7 +111,8 @@
 
     </main>
 
-    <footer>&copy;2021 Rocky Mountain Dreamers</footer>
+    <footer>
+        <div class="footerText">&copy;2021 Rocky Mountain Dreamers</div></footer>
     <script type="module" src="./scripts/main.js"></script>
 </body>
 
