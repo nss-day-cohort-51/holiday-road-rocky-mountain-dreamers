@@ -277,22 +277,25 @@ padding-left: 20px;
     width: 100%;
     height: 675px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    color: #FFFFFF;
 }
-
-
+#singleTrip{
+    border: #EFC0CA solid 2px;
+    margin: 4px 4px 4px 4px;
+}
 footer {
     background-color: #214E34;
 }
 footer p {
     display: flex;
     justify-content: center;
+    color: #FFFFFF;
 }
 #meetTheTeamButton {
     display: flex;
     justify-content: center;
 }
-
 #parkImage {
     display: flex;
     flex-direction: row;
@@ -300,32 +303,21 @@ footer p {
     height: 200px;
     padding-right: 20px;
 }
-
 #parkImage img {
-    
     width: auto;
     height: auto;
 }
-
 .parkImageDetail {
     display: flex;
     flex-direction: column;  
     padding-left: 20px;
     align-items: left;
-    
 }
 .parkImageDesc {
     padding-top: 10px;
     display: flex;
     align-items: left;
-
-
 }
-.footerText
- {
-    color: white;
-    display:flex;
-    justify-content: center;
-}
+
 
 

@@ -12,8 +12,9 @@ import { parkPreview } from "./parks/parkPreview.js";
 import { eatPreview } from "./eateries/EateriesPreview.js";
 import { bizPreview } from "./attractions/attractionPreview.js";
 import { parks } from "./parks/Park.js";
-import { createTripEntry } from "./trips/tripDataManager.js";
-
+import { createTripEntry, getTrips } from "./trips/tripDataManager.js";
+import { tripList } from "./trips/tripList.js";
+//import { tripEntry } from "./trips/tripEntry.js";
 
 const showEat = () => {
     // This Function takes the imported eateries and adds it to the drop doen menu in HTML
@@ -107,18 +108,29 @@ saveButtonElement.addEventListener("click", event => {
         bizarreryId: parseInt(savedBizarrery),
         eateryId: parseInt(savedEatery)
     }
-console.log(savedTripObject);
+//console.log(savedTripObject);
     // be sure to import from the DataManager
     createTripEntry(savedTripObject)
         .then(dbResponse => {
-            //showTrips();
+            showTrips();
+            //showTripEntry();
         });
 })
+const showTrips = () => {
+	//Get a reference to the location on the DOM where the list will display
+	
+	getTrips().then((tripObject) => {
+        console.log(tripObject)
+		tripList(tripObject);
+	})
+}
+// const showTripEntry = () => {
+//     const entryElement = document.querySelector("#savedTripData");
+//     entryElement.innerHTML = tripEntry();
+// }
 
 
-
-
-
+showTrips();
 showBiz();
 showStates();
 showEat();
