@@ -18,6 +18,14 @@ const showParkDetail = () => {
     document.querySelector("#parkDetails").showModal();
 }
 
+const showEatDetail = () => {
+    document.querySelector("#eatDetails").showModal();
+}
+
+const showBizDetail = () => {
+    document.querySelector("#bizDetails").showModal();
+}
+
 const showEat = () => {
     // This Function takes the imported eateries and adds it to the drop doen menu in HTML
     const eatElement = document.querySelector("#eatery");
@@ -58,15 +66,27 @@ const showEatPreview = (eatery) => {
     getSoloEat(eatery).then((soloEatData) => {
         //console.log(soloEatData)
         eatPreviewElement.innerHTML = eatPreview(soloEatData)
+        const eatDetailsButtonElement = document.querySelector("#eateryDetailsButton")
+
+        eatDetailsButtonElement.addEventListener("click", event => {
+            showEatDetail();
+        } )
     })
 }
+
 const showBizPreview = (bizarrery) => {
     const bizPreviewElement = document.querySelector("#bizDisplay");
     getSoloBiz(bizarrery).then((soloBizData) => {
         //console.log(soloBizData)
         bizPreviewElement.innerHTML = bizPreview(soloBizData)
+        const bizDetailsButtonElement = document.querySelector("#bizarreryDetailsButton")
+
+        bizDetailsButtonElement.addEventListener("click", event => {
+            showBizDetail();
+        })
     })
 }
+
 const applicationElement = document.querySelector("#leftSection");
 applicationElement.addEventListener("change", event => {
 
