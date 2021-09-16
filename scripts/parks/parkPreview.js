@@ -17,7 +17,7 @@ export const parkPreview = (parkObject) => {
       <div id="parkImage">
       <img src=${parkObject.images[2] != undefined ? parkObject.images[2].url : "https://www.nps.gov/common/commonspot/templates/images/logos/nps_social_image_02.jpg"} alt="Image Missing">
       </div>
-      <dialog id="parkDetails" onClick="close()"></dialog>
+      <dialog id="parkDetails" onClick="close()">state:${parkObject.states}directions:${parkObject.directionsInfo} </dialog>
       
       
       
@@ -26,4 +26,5 @@ export const parkPreview = (parkObject) => {
        
       </section>
     `
+    
 }
