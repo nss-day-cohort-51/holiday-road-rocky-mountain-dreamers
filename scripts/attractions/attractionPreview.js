@@ -16,7 +16,12 @@ export const bizPreview = (bizObject) => {
       </section>
       <div class="bizDetailButton">
       <button id="bizarreryDetailsButton">Details</button>
-      <dialog id="bizDetails" onClick="close()">state:${bizObject.state}city:${bizObject.city}souvenirs:${bizObject.ameneties.souvenirs}restrooms:${bizObject.ameneties.restrooms}</dialog>
+      <dialog id="bizDetails" onClick="close()">
+        <p>state:${bizObject.state}</p>
+        <p>city:${bizObject.city}</p>
+        <p>souvenirs:${bizObject.ameneties.souvenirs}</p>
+        <p>restrooms:${bizObject.ameneties.restrooms}</p>
+        </dialog>
       </div>
     `
 }

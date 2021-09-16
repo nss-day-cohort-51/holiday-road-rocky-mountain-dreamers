@@ -113,10 +113,12 @@ nav .h3Text{
     background-color: #FFFFFF;
     border-right: 2px #EFC0CA solid;
     border-bottom: 2px #EFC0CA solid;
+    
 }
 #tripPreviewHeader {
     display: flex;
     justify-content: center;
+    padding-bottom: 20px;
 }
 #weather {
 /* CONTAINER FOR THE WEATHER API INFO */
@@ -132,6 +134,7 @@ nav .h3Text{
     height: 167.75px; /* THIS IS AN EVEN DISTRIBUTION AMOUNT FOR 4 CONTAINERS */
     width: 100%;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 #natlParkText {
     display: flex;
@@ -143,15 +146,28 @@ nav .h3Text{
     padding-top: 120px;
     
 }
-.parkDetailButton {
+/* .parkDetailButton {
     padding-top: 93px;
     padding-right: 20px;
-}
+} */
 #parkDetailsButton {
     height: 25px;
     width: 75px;
     font-weight: bold;
-    background-color: #EFC0CA;  
+    background-color: #EFC0CA;
+    margin-top: 10px;
+    margin-left: 20px;
+    
+}
+
+.parkDetailAndButton {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 375px;
+    padding-left: 20px;
+    padding-top: 10px;
+    
+    
 }
 /* END SECTION OF NATION PARK INFORMATION */
 
@@ -201,8 +217,10 @@ nav .h3Text{
 .bizDetailButton {
 
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-right: 375px;
+    padding-left: 20px;
+    padding-top: 10px;
        
 
 }
@@ -211,7 +229,7 @@ nav .h3Text{
 
 /* BEGIN SECTION OF EATERY INFORMATION */
 #eateryContainer {
-    height: 167.75px; /* THIS IS AN EVEN DISTRIBUTION AMOUNT FOR 4 CONTAINERS */
+    height: 200.75px; /* THIS IS AN EVEN DISTRIBUTION AMOUNT FOR 4 CONTAINERS */
     width: 100%;
     overflow: hidden;
 }
@@ -223,12 +241,14 @@ nav .h3Text{
     display: flex;
     justify-content: flex-end;
     padding-top: 120px;
+    margin-bottom: 500px;
 }
 #eateryDetailsButton {
     height: 25px;
     width: 75px;
     font-weight: bold;
     background-color: #EFC0CA;
+    
     
     
     
@@ -245,8 +265,11 @@ nav .h3Text{
 
 .eatDetailsButton {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin-right: 375px;
+    padding-left: 20px;
+    padding-top: 10px;
+
 }
 
 .eatName {
@@ -287,7 +310,7 @@ padding-left: 20px;
 footer {
     background-color: #214E34;
 }
-footer p {
+.footerText {
     display: flex;
     justify-content: center;
     color: #FFFFFF;
@@ -298,7 +321,7 @@ footer p {
 }
 #parkImage {
     display: flex;
-    flex-direction: row;
+    flex-direction: right;
     width: 75%;
     height: 200px;
     padding-right: 20px;
@@ -306,10 +329,11 @@ footer p {
 #parkImage img {
     width: auto;
     height: auto;
+    
 }
 .parkImageDetail {
     display: flex;
-    flex-direction: column;  
+    flex-direction: row;  
     padding-left: 20px;
     align-items: left;
 }
@@ -317,19 +341,57 @@ footer p {
     padding-top: 10px;
     display: flex;
     align-items: left;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
+.parkRow {
+    display: flex;
+    flex-direction: row;
+}
 
+/* THIS IS FOR THE STYLING OF DETAIL BUTTONS & MODALS */
 
-#parkDetails {  
-  color: white;
-  background:#979B8D;
+#parkDetails   {  
+  color:black;
+  background:#EFC0CA;
   position: absolute;
   float: left;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 600px;
-  height: 600px;
+  height: 300px;
 }
 
+#eatDetails {
+
+    color:black;
+    background:#EFC0CA;
+    position: absolute;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+
+}
+
+#bizDetails {
+
+    color: black;
+    background:#EFC0CA;
+    position: absolute;
+    float: left;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+}
+
+.modalParkText {
+    display: flex;
+    justify-content: center;
+}
