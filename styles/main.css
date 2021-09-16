@@ -8,6 +8,7 @@
 body {
 /* THIS SETS THE BODY BACKGROUND TO GREEN TO PREVENT WHITE SPACE BELOW THE FOOTER */
     background-color: #214E34;
+    
 }
 
 header { 
@@ -15,11 +16,13 @@ header {
     display: flex;
     flex-direction: row;
     Font-Size: 40px;
-    height: 200px;
+    height: 170px;
     background-color: #EFC0CA;
     border-bottom: 2px #EFC0CA solid;
     Font-Family: 'Questrial', Sans-Serif;
     background-image: url("./images/PFAbanner2.png");
+    
+    
 }
 
 main{
@@ -38,7 +41,7 @@ nav{
     width: 100%;  
     display: flex;
     flex-direction: column;
-    background-color: #979B8D;
+    background-image: linear-gradient(#979B8D, #EFC0CA,#979B8D );
     border-right: 2px #EFC0CA solid;
     border-bottom: 2px #EFC0CA solid;
     justify-content: space-around;
@@ -47,6 +50,40 @@ nav .h3Text{
 /* COVERS ALL TEXT IN THE LEFT NAV PANE */
     display: flex;
     justify-content: center;
+}
+/* THIS IS WHERE YOU RESIZE DROPDOWNS IN NAVBAR */
+.navState {
+   
+    width: 375px;
+}
+.navStateField {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.navPark {
+    width: 375px;
+}
+.navParkField {
+    margin-left: 10px;
+    margin-right: 10px; 
+}
+.navBiz {
+    width: 375px;
+}
+.navBizField {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.navEat {
+    width: 375px; 
+}
+.navEatField {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navEatName {
+   margin-left: 20px;
 }
 #saveTrip{
 /* CONTAINER THAT WILL HOLD THE SAVE TRIP BUTTON */
@@ -62,7 +99,7 @@ nav .h3Text{
     height: 50px;
     font-size: 1.7em;
     align-items: center;
-    background-color: #EFC0CA;
+    background-image: radial-gradient(white,#EFC0CA);
     border-radius: 8px;
 }
 
@@ -104,15 +141,17 @@ nav .h3Text{
     display: flex;
     justify-content: flex-end;
     padding-top: 120px;
-    padding-left: 50px;
-    padding-top: 25px;
+    
+}
+.parkDetailButton {
+    padding-top: 93px;
+    padding-right: 20px;
 }
 #parkDetailsButton {
     height: 25px;
     width: 75px;
     font-weight: bold;
-    background-color: #EFC0CA;
-    
+    background-color: #EFC0CA;  
 }
 /* END SECTION OF NATION PARK INFORMATION */
 
@@ -137,6 +176,35 @@ nav .h3Text{
     width: 75px;
     font-weight: bold;
     background-color: #EFC0CA;
+    
+    
+}
+
+.bizName {
+    display: flex;
+    align-items: left;
+    padding-left: 20px;
+    
+    
+}
+.bizDesc {
+
+    display: flex;
+    align-items: left;
+    padding-left: 20px;
+    /* padding-right: 500px; */
+    padding-top: 10px;
+    margin-right: 400px;
+
+}
+
+.bizDetailButton {
+
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 375px;
+       
+
 }
 /* END SECTION OF BIZARRERY INFORMATION */
 
@@ -161,6 +229,28 @@ nav .h3Text{
     width: 75px;
     font-weight: bold;
     background-color: #EFC0CA;
+    
+    
+    
+}
+
+.eatDesc {
+    display: flex;
+    align-items: left;
+    padding-left: 20px;
+    /* padding-right: 500px; */
+    padding-top: 10px;
+    margin-right: 400px;
+}
+
+.eatDetailsButton {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 375px;
+}
+
+.eatName {
+padding-left: 20px;
 }
 /* END SECTION OF EATERY INFORMATION */
 
@@ -171,7 +261,7 @@ nav .h3Text{
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: #214E34;
+    background-image: linear-gradient(#214E34,#153321,#214E34);
 }
 #myTripsContainer {
     width: 100%;
@@ -208,6 +298,7 @@ footer p {
     flex-direction: row;
     width: 75%;
     height: 200px;
+    padding-right: 20px;
 }
 
 #parkImage img {
@@ -230,3 +321,11 @@ footer p {
 
 
 }
+.footerText
+ {
+    color: white;
+    display:flex;
+    justify-content: center;
+}
+
+
