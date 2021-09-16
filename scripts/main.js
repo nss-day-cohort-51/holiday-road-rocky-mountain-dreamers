@@ -14,7 +14,19 @@ import { bizPreview } from "./attractions/attractionPreview.js";
 import { parks } from "./parks/Park.js";
 import { createTripEntry, getTrips } from "./trips/tripDataManager.js";
 import { tripList } from "./trips/tripList.js";
-//import { tripEntry } from "./trips/tripEntry.js";
+
+
+const showParkDetail = () => {
+    document.querySelector("#parkDetails").showModal();
+}
+
+const showEatDetail = () => {
+    document.querySelector("#eatDetails").showModal();
+}
+
+const showBizDetail = () => {
+    document.querySelector("#bizDetails").showModal();
+}
 
 const showEat = () => {
     // This Function takes the imported eateries and adds it to the drop doen menu in HTML
@@ -43,6 +55,11 @@ const showParkPreview = (parkCode) => {
     getSoloPark(parkCode).then((soloParkData) => {
         //console.log(soloParkData)
         parkPreviewElement.innerHTML = parkPreview(soloParkData[0])
+        const parkDetailsButtonElement = document.querySelector("#parkDetailsButton")
+        
+        parkDetailsButtonElement.addEventListener("click", event => {
+            showParkDetail();
+        })
         //console.log(parkCode)
     })
 }
@@ -51,15 +68,27 @@ const showEatPreview = (eatery) => {
     getSoloEat(eatery).then((soloEatData) => {
         //console.log(soloEatData)
         eatPreviewElement.innerHTML = eatPreview(soloEatData)
+        const eatDetailsButtonElement = document.querySelector("#eateryDetailsButton")
+
+        eatDetailsButtonElement.addEventListener("click", event => {
+            showEatDetail();
+        } )
     })
 }
+
 const showBizPreview = (bizarrery) => {
     const bizPreviewElement = document.querySelector("#bizDisplay");
     getSoloBiz(bizarrery).then((soloBizData) => {
         //console.log(soloBizData)
         bizPreviewElement.innerHTML = bizPreview(soloBizData)
+        const bizDetailsButtonElement = document.querySelector("#bizarreryDetailsButton")
+
+        bizDetailsButtonElement.addEventListener("click", event => {
+            showBizDetail();
+        })
     })
 }
+
 const applicationElement = document.querySelector("#leftSection");
 applicationElement.addEventListener("change", event => {
 
@@ -108,7 +137,6 @@ saveButtonElement.addEventListener("click", event => {
         bizarreryId: parseInt(savedBizarrery),
         eateryId: parseInt(savedEatery)
     }
-//console.log(savedTripObject);
     // be sure to import from the DataManager
     createTripEntry(savedTripObject)
         .then(dbResponse => {
@@ -128,6 +156,7 @@ const showTrips = () => {
 //     const entryElement = document.querySelector("#savedTripData");
 //     entryElement.innerHTML = tripEntry();
 // }
+
 
 
 showTrips();
