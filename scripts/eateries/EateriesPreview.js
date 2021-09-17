@@ -17,7 +17,13 @@ export const eatPreview = (eatObject) => {
       </section>
       <div class="eatDetailsButton">
       <button id="eateryDetailsButton">Details</button>
-      <dialog id="eatDetails" onClick="close()">state:${eatObject.state}city:${eatObject.city}pet friendly:${eatObject.ameneties.petFriendly} restrooms:${eatObject.ameneties.restrooms} wifi:${eatObject.ameneties.wifi}</diaglog>
+      <dialog id="eatDetails" onClick="close()">
+      <p>state:${eatObject.state}</p>
+      <p>city:${eatObject.city}</p>
+      <p>pet friendly:${eatObject.ameneties.petFriendly}</p>
+      <p>restrooms:${eatObject.ameneties.restrooms}</p>
+      <p>wifi:${eatObject.ameneties.wifi}</p>
+      </diaglog>
       </div>
     `
 }
